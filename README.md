@@ -31,7 +31,8 @@ Clamp parameters are fairly self explanatory. The default values are again meant
 The create cell button calls the necessary hoc files to generate the simulation as you have specified. When the Record Data radio button is unchecked, this will call mosinit_RUNONLY.hoc. When checked, this will call mosinit.hoc. I would recommend not recording data; at this point it's not necessary and I'm not 100% sure it works properly with the SCM at the moment. 
 
 ## HOC Files 
-Create cell calls the following hoc files: 
+Create cell calls the following hoc files:
+```
 mosinit.hoc or mosinit_RUNONLY.hoc
 |   setParameters.hoc
 |   makeCell.hoc
@@ -41,7 +42,7 @@ mosinit.hoc or mosinit_RUNONLY.hoc
     |    makeActiveChannels.hoc
     |    makePairedUnpaired.hoc
 |   makeSimpleWindows.hoc
-
+```
 You can make changes to any of these files and execute them by clicking the "Create cell" button on the prompt window again. Caveat: for this to work properly you must stop any currently running simulation before recreating the cell. 
 If you wish to make changes to any mod files you must completely exit from nrngui, recompile via nrnivmodl (or mknrndll on windows), and then reopen nrngui SCMpromptwindow.hoc. 
 
