@@ -39,9 +39,6 @@ objectvar save_window
 	for i = 0,gaba_paired.count()-1 {
 		save_window.point_mark(gaba_paired.o(i), 2, "O", 4)		// 2 = red;  o = small unfilled circle; 4 = pixel size 
 		}
-	for i = 0,gaba_unpaired.count()-1 {
-		save_window.point_mark(gaba_unpaired.o(i), 4, "O", 4)		// 3 = blue;  o = small unfilled circle; 4 = pixel size 
-		}
 	flush_list.append(save_window)
 	save_window.flush()
 	save_window.save_name("PointProcesses")

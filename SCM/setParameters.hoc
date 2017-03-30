@@ -101,24 +101,12 @@
 		interval_paired		= interval_paired_prompt    // ms/spike 								
 		number_paired		= number_paired_prompt		// total number of spikes 					
 		start_paired		= start_paired_prompt		// ms 										
-		noise_paired		= noise_paired_prompt		// Boolean: 0 = noiseless, 1 = Poisson 		
 		//GABAa maximal conductance
 		gmax_paired_soma	= 0.00053  // (uS)	(as given in http://www.ncbi.nlm.nih.gov/pubmed/9214504)
-
-	// unpaired synapses
-		location_unpaired 	= 0		// soma = 0, prox = 1, mid = 2, dist = 3
-		interval_unpaired	= interval_unpaired_prompt		// ms/spike 							
-		number_unpaired		= number_unpaired_prompt		// total number of spikes 				
-		start_unpaired 		= start_unpaired_prompt		  	// ms 									
-		noise_unpaired		= noise_unpaired_prompt			// Boolean: 0 = noiseless, 1 = Poisson 
-		//GABAa maximal conductance
-		gmax_unpaired_soma	= 0.025  // (uS)	(as given in Macaferri et al. 2000, J physiol.)
-
 
 //-----------------------------------------------------------------------------
 // synaptic densities												from makePairedUnpaired.hoc; "foo_prompt" set in promptWindow.hoc
 		density_paired		= density_paired_prompt 	//number of synapses / um^2 of membrane 
-		density_unpaired 	= density_unpaired_prompt 	//number of synapses / um^2 of membrane
 		
 //-----------------------------------------------------------------------------
 // clamp parameters 												from makeClamp.hoc
@@ -128,4 +116,3 @@
 		clamp_number  		= clamp_num_prompt		// total number of current injections	
 		//clamp_start			= start_paired + 1		// (ms)			
 		//print "Clamp Start (setParamters) = ", clamp_start			
-		clamp_noise			= clamp_noise_prompt	// Boolean: 0 = noiseless, 1 = Poisson 
