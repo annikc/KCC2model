@@ -9,7 +9,7 @@ Will update with bash scripts for running code on SciNet system, including autom
 
 # SCM 
 Will focus on getting working simulation in SCM first. To run: 
-'''
+```
 > nrngui SCMpromptWindow.hoc
-'''
+```
 Will need to update this file to remove unpaired synapses and option to run in different compartments. 
