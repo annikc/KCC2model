@@ -141,7 +141,7 @@ hbox = new HBox(0)
 hbox.intercept(1)
 xpanel("Specify Parameters")
 	xlabel("PAIRED SYNAPSES")
-		density_paired_prompt = 0.01
+		density_paired_prompt = 0.001 // creates one synapse
 		xvalue("Density of Paired Synapses","density_paired_prompt", 1)
 		
 		interval_paired_prompt = 200
@@ -150,7 +150,7 @@ xpanel("Specify Parameters")
 		number_paired_prompt = 150
 		xvalue("Number of Paired Synapse Spikes","number_paired_prompt", 1) 
 		
-		start_paired_prompt = 10050
+		start_paired_prompt = 50
 		xvalue("Start of Paired Synapse Spikes","start_paired_prompt", 1)	
 
 		noise_paired_prompt = 0
