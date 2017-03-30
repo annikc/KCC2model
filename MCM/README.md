@@ -1,6 +1,8 @@
-# MultiCompartmentModel
+# KCC2Model
 
-Last updated: May 25, 2016
+TODO list:
+https://docs.google.com/document/d/1G1RuNlDHYTx5nhs32q0ZfmgSOhofUhxcbc9QnsA9SNg
+
 
 Before opening nrngui, make sure to compile code. Simulations can be run on desktop by opening the nrngui and loading the hoc file 
 ```
