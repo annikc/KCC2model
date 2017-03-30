@@ -1,8 +1,7 @@
 
 # NEURON
-x86_64/
-MCM/*.mod
-SCM/*.mod
+MCM/x86_64/
+SCM/x86_64/
 
 
 ### JetBrains template
