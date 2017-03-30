@@ -162,28 +162,6 @@ xpanel("Specify Parameters")
 
 		xlabel("       ")
 
-	xlabel("UNPAIRED SYNAPSES")
-		density_unpaired_prompt = 0
-		xvalue("Density of Unpaired Synapses","density_unpaired_prompt", 1)
-		
-		interval_unpaired_prompt = interval_paired_prompt
-		xvalue("Interval Between Unpaired Synapse Spikes","interval_unpaired_prompt", 1)
-		
-		number_unpaired_prompt = 50
-		xvalue("Number of unpaired Synapse Spikes","number_unpaired_prompt", 1)// increments counter for t by 1 
-		
-		start_unpaired_prompt = 10150
-		xvalue("Start of Unpaired Synapse Spikes","start_unpaired_prompt", 1)	// increments counter for t by 1 
-
-		noise_unpaired_prompt = 0
-		xmenu("Noise of Unpaired Synapse Spikes")
-			xradiobutton("Noise Off", "set_noise_unpaired(0)")
-			xradiobutton("Noise On", "set_noise_unpaired(1)")
-		xmenu()
-		xvarlabel(noise_unpaired_string)
-
-		xlabel("       ")
-
 	xlabel("CURRENT CLAMP")
 		clamp_amp_prompt = 2
 		xvalue("Current Clamp Amp","clamp_amp_prompt", 1)
