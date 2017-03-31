@@ -62,8 +62,8 @@
 			vtraub_soma     = -60  		// mV 												 
 		// Calcium Currents 								(as given in Poirazi et al., 2003, Neuron)
 			vgcc_soma		= 1 		// Boolean: 0 = no VGCC in soma, 1 = VGCC in soma 	
-			gcatbar_soma	= 3.8e-3 	// mho/cm^2 
-			gcalbar_soma	= 3.8e-3//7.6e-3		// mho/cm^2  Low activation threshold L-type channel
+			gcatbar_soma	= 5.3e-2 	// mho/cm^2 
+			gcalbar_soma	= 0//2.0e-4		// mho/cm^2  Low activation threshold L-type channel
 	
 	
 
