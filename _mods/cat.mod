@@ -30,6 +30,7 @@ PARAMETER {           :parameters that can be entered when function is called in
 NEURON {
 	SUFFIX cat
 	USEION ca READ cai,cao WRITE ica
+	USEION caT WRITE icaT
         RANGE gcatbar, hinf, minf, taum, tauh, ica
 }
 
@@ -37,6 +38,7 @@ STATE {	m h }  : unknown activation and inactivation parameters to be solved in 
 
 ASSIGNED {     : parameters needed to solve DE
 	ica (mA/cm2)
+	icaT (mA/cm2)
         gcat  (mho/cm2) 
         minf
         hinf
@@ -56,7 +58,7 @@ BREAKPOINT {
 	SOLVE states
 	gcat = gcatbar*m*m*h*h2(cai) : maximum channel permeability
 	ica = gcat*ghk(v,cai,cao)    : dummy calcium current induced by this channel
-
+    icaT = ica
 }
 
 UNITSOFF

@@ -13,6 +13,7 @@ ENDCOMMENT
 NEURON {
 	SUFFIX calH
 	USEION ca READ eca WRITE ica
+	USEION calh WRITE icalh
     RANGE gcalbar, m, h
 	RANGE inf, fac, tau
 }
@@ -38,6 +39,7 @@ PARAMETER {          				: parameters that can be entered when function is calle
 :------------------------------------------------------------------------------
 ASSIGNED {                        	: parameters needed to solve DE
 	ica (mA/cm2)
+	icalh (mA/cm2)
     inf[2]
 	fac[2]
 	tau[2]
@@ -52,12 +54,14 @@ INITIAL {
 	h = 1    : initial inactivation parameter value
     states()
 	ica = gcalbar*m*m*m*h*(v - eca) : initial Ca++ current value
+	icalh = ica
 }
 
 :------------------------------------------------------------------------------
 BREAKPOINT {
 	SOLVE states
-	ica = gcalbar*m*m*m*h*(v - eca)       
+	ica = gcalbar*m*m*m*h*(v - eca)
+	icalh = ica       
 }
 
 :------------------------------------------------------------------------------

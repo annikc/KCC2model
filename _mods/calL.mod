@@ -14,6 +14,7 @@ ENDCOMMENT
 NEURON {
 	SUFFIX calL
 	USEION ca READ cai,cao WRITE ica
+	USEION call WRITE icall
     RANGE gcalbar, gcal, minf, taum
 }
 
@@ -46,6 +47,7 @@ PARAMETER {							:parameters that can be entered when function is called in cel
 :------------------------------------------------------------------------------
 ASSIGNED {                       : parameters needed to solve DE
 	ica 	(mA/cm2)
+	icall 	(mA/cm2)
     gcal  	(mho/cm2) 
     minf
     taum
@@ -66,6 +68,7 @@ BREAKPOINT {
 	SOLVE states
 	gcal 	= gcalbar*m*h2(cai) : maximum channel permeability
 	ica 	= gcal*ghk(v,cai,cao): calcium current induced by this channel
+	icall   = ica
 }
 
 :------------------------------------------------------------------------------
