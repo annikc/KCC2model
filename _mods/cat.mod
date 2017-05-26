@@ -30,7 +30,7 @@ PARAMETER {           :parameters that can be entered when function is called in
 NEURON {
 	SUFFIX cat
 	USEION ca READ cai,cao WRITE ica
-	USEION caT WRITE icaT
+	USEION caT WRITE icaT VALENCE 2
         RANGE gcatbar, hinf, minf, taum, tauh, ica
 }
 

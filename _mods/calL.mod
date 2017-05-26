@@ -14,7 +14,7 @@ ENDCOMMENT
 NEURON {
 	SUFFIX calL
 	USEION ca READ cai,cao WRITE ica
-	USEION call WRITE icall
+	USEION call WRITE icall VALENCE 2
     RANGE gcalbar, gcal, minf, taum
 }
 

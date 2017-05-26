@@ -13,7 +13,7 @@ ENDCOMMENT
 NEURON {
 	SUFFIX calH
 	USEION ca READ eca WRITE ica
-	USEION calh WRITE icalh
+	USEION calh WRITE icalh VALENCE 2
     RANGE gcalbar, m, h
 	RANGE inf, fac, tau
 }
