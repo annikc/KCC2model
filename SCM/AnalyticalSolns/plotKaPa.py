@@ -2,9 +2,6 @@ import struct
 import numpy as np
 import matplotlib.pyplot as plt
 
-experiment = "Ca2+ vs. Kinase and Phosphatase Activation"
-
-
 
 def plot_Ka(cal):
 	V_ak = 390 #/s from Kohout 2002
@@ -16,7 +13,6 @@ def plot_Ka(cal):
 	K_a = v_ak/(v_ak + v_ik)
 	return K_a	
 
-	# dK_a/dt = ((V_ak*(cal)^h_k)/(R^h_k + (cal)^h_k))*K_i - v_ik*K_a
 def plot_Pa(cal):
 	V_ap = 100 #200 # /M*s
 	h_p = 3 #(2.8-3 from Stemmer & Klee 1994)
@@ -27,22 +23,13 @@ def plot_Pa(cal):
 	P_a = v_ap/(v_ap + v_ip)
 
 	return P_a
-	# dP_a/dt = ((V_ap*(cal)^h_p)/(R^h_p + (cal)^h_p))*P_i - v_ip*P_a
-
+	
 rec_cal = np.zeros(100000)
 rec_cal2 = np.linspace(0, 3.5e-6, 10000)
 rec_Ka = np.zeros(len(rec_cal2))
 rec_Pa = np.zeros(len(rec_cal2))
 resting_ca = 100e-9
 
-#for i in range(0,100000):
-#	cal = float(i)/50000000000
-#	rec_cal[i] = cal
-#	rec_Ka[i] = plot_Ka(cal)
-#	#plot_Ka(cal)
-#
-#	rec_Pa[i] = plot_Pa(cal)
-#	#plot_Pa(cal)
 
 for i in range(len(rec_cal2)):
 	rec_Ka[i] = plot_Ka(rec_cal2[i])
@@ -118,4 +105,4 @@ plt.annotate('Resting Ca$^{2+}$', xy=(resting_ca, 0), xytext=(0.000001, 0.2),
             )
 #save("../Thesis/fig/PaKa", ext="png", close=True, verbose=True)
 
-plt.show()
+plt.savefig('kapa.png', format='png')
